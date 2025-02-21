@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Survey Form</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+    <!-- 
+    User Stories:
+    ✅ You should have a page title in an h1 element with an id of title
+    ✅ You should have a short explanation in a p element with an id of description
+    ✅ You should have a form element with an id of survey-form
+    ✅ Inside the form element, you are required to enter your name in an input field that has an id of name and a type of text
+    ✅ Inside the form element, you are required to enter your email in an input field that has an id of email
+    If you enter an email that is not formatted correctly, you will see an HTML5 validation error
+    ✅ Inside the form, you can enter a number in an input field that has an id of number
+    The number input should not accept non-numbers, either by preventing you from typing them or by showing an HTML5 validation error (depending on your browser).
+    ✅ If you enter numbers outside the range of the number input, which are defined by the min and max attributes, you will see an HTML5 validation error
+    ✅ For the name, email, and number input fields, you can see corresponding label elements in the form, that describe the purpose of each field with the following ids: id="name-label", id="email-label", and id="number-label"
+    ✅ For the name, email, and number input fields, you can see placeholder text that gives a description or instructions for each field
+    ✅ Inside the form element, you should have a select dropdown element with an id of dropdown and at least two options to choose from
+    ✅ Inside the form element, you can select an option from a group of at least two radio buttons that are grouped using the name attribute
+    ✅ Inside the form element, you can select several fields from a series of checkboxes, each of which must have a value attribute
+    ✅ Inside the form element, you are presented with a textarea for additional comments
+    ✅ Inside the form element, you are presented with a button with id of submit to submit all the inputs
+    Fulfill the user stories and pass all the tests below to complete this project. Give it your own personal style. Happy Coding!
+
+    Note: Be sure to add <link rel="stylesheet" href="styles.css"> in your HTML to link your stylesheet and apply your CSS
+    -->
+    <h1 id="title">Survey Form</h1>
+    <p id="description">This is a survey form for the <a
+            href="https://www.freecodecamp.org/learn/2022/responsive-web-design/" target="_blank">freeCodeCamp
+            Responsive Web Design course.</a></p>
+
+    <form id="survey-form">
+        <div class="form-group">
+            <label id="name-label" for="name">Name</label>
+            <input type="text" id="name" name="name" placeholder="Enter your name" class="form-control" required>
+        </div>
+
+        <div class="form-group">
+            <label id="email-label" for="email">Email</label>
+            <input type="email" name="email" id="email" placeholder="Enter your email" class="form-control" required>
+        </div>
+
+        <div class="form-group">
+            <label id="number-label" for="number">Age</label>
+            <input type="number" name="number" id="number" placeholder="Enter your age" min="18" max="100"
+                class="form-control" required>
+        </div>
+
+        <div class="form-group">
+            <label id="drink-label" for="drink">What drink do you prefer?</label>
+            <select name="dropdown" id="dropdown" class="form-control">
+                <option value="option-coffee">Coffee</option>
+                <option value="option-tea">Tea</option>
+            </select>
+        </div>
+
+        <div class="form-group">
+            <label id="os-system-label" for="os-system">Which OS system do you use?</label>
+            <label for="os-system-windows">
+                <input type="radio" name="os-system" id="os-system-windows" class="input-radio"
+                    value="windows" />Windows
+            </label>
+            <label for="os-system-mac">
+                <input type="radio" name="os-system" id="os-system-mac" class="input-radio" value="mac" />Mac
+            </label>
+            <label for="os-system-linux">
+                <input type="radio" name="os-system" id="os-system-linux" class="input-radio" value="linux" />Linux
+            </label>
+        </div>
+
+        <div class="form-group">
+            <label for="programming-languages-label">Select your programming languages</label>
+            <label for="programming-languages-java">
+                <input type="checkbox" name="programming-languages" id="programming-languages-java"
+                    class="input-checkbox" value="java" />Java
+            </label>
+            <label for="programming-languages-python">
+                <input type="checkbox" name="programming-languages" id="programming-languages-python"
+                    class="input-checkbox" value="python" />Python
+            </label>
+            <label for="programming-languages-kotlin">
+                <input type="checkbox" name="programming-languages" id="programming-languages-kotlin"
+                    class="input-checkbox" value="kotlin" />Kotlin
+            </label>
+        </div>
+
+        <div class="form-group">
+            <label for="comments-label">Comments</label>
+            <textarea name="comments" id="comments" cols="30" rows="10"
+                placeholder="Any suggestions or comments?"></textarea>
+        </div>
+
+        <input type="submit" value="Submit" id="submit">
+    </form>
+
+</body>
+
+</html>
