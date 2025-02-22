@@ -1,0 +1,68 @@
+html {
+    font-size: 16px;
+    font-family: monospace;
+    color: antiquewhite;
+    background-color: #0f1415;
+}
+
+main {
+    width: 80%;
+    box-sizing: border-box;
+    margin: 0 auto;
+    background-color: #353a3b;
+    border-radius: 1rem;
+    padding: 3rem;
+}
+
+h1 {
+    text-align: center;
+    font-size: 2.5rem;
+    margin: 0;
+}
+
+p {
+    text-align: center;
+    font-size: 1.5rem;
+}
+
+figure {
+    width: 40vw;
+    margin: 0 auto;
+}
+
+figure>img {
+    display: block;
+    width: 100%;
+    border-radius: 1rem;
+    max-width: 100%;
+}
+
+figcaption {
+    text-align: start;
+}
+
+h2 {
+    text-align: center;
+    margin: 2rem 0;
+}
+
+.two-columns {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+}
+
+.quote {
+    width: 50%;
+    margin: 0 auto;
+}
+
+section p {
+    font-size: 1.1rem;
+    font-style: italic;
+    text-align: left;
+}
+
+a {
+    color: antiquewhite;
+}
