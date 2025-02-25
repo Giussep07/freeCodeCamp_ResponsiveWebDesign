@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Technical Documentation Page</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+    <nav id="navbar">
+        <header><img id="logo"
+                src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d4/Kotlin_logo.svg/2560px-Kotlin_logo.svg.png"
+                alt="Kotlin logo">Kotlin</header>
+        <a href="#Introduction" class="nav-link">Introduction</a>
+        <a href="#Package_definition_and_imports" class="nav-link">Package definition and imports</a>
+        <a href="#Program_entry_point" class="nav-link">Program entry point</a>
+        <a href="#Print_to_the_standard_output" class="nav-link">Print to the standard output</a>
+        <a href="#Read_from_the_standard_input" class="nav-link">Read from the standard input</a>
+        <a href="#Functions" class="nav-link">Functions</a>
+    </nav>
+    <main id="main-doc">
+        <section class="main-section" id="Introduction">
+            <header>Introduction</header>
+            <p>Kotlin is a modern but already mature programming language designed to make developers happier. It's
+                concise, safe, interoperable with Java and other languages, and provides many ways to reuse code between
+                multiple platforms for productive programming.</p>
+
+            <p>To start, why not take our tour of Kotlin? This tour covers the fundamentals of the Kotlin programming
+                language and can be completed entirely within your browser.</p>
+            <p>This is a collection of basic syntax elements with examples. At the end of every section, you'll find a
+                link to a detailed description of the related topic.</p>
+
+            <p>You can also learn all the Kotlin essentials with the free <a
+                    href="https://hyperskill.org/tracks?category=4&utm_source=jbkotlin_hs&utm_medium=referral&utm_campaign=kotlinlang-docs&utm_content=button_1&utm_term=22.03.23&_gl=1*ngy3xo*_gcl_au*MTQ0MjIyNjU5LjE3Mzc0MjEzNzQ.*_ga*ODI2Njc4NDUzLjE3Mzc0MjEzNzE.*_ga_9J976DJZ68*MTc0MDQ5MDQ3MS4xMS4xLjE3NDA0OTA1MDMuMjguMC4w"
+                    target="_blank" rel="noopener noreferrer">Kotlin Core track</a> by JetBrains Academy.</p>
+
+            <p><strong>Join the Kotlin community</strong></p>
+            <ul>
+                <li><img src="https://kotlinlang.org/docs/images/slack.svg" alt="slack_logo">Slack: <a
+                        href="https://surveys.jetbrains.com/s3/kotlin-slack-sign-up?_gl=1*1csy3hz*_gcl_au*MTQ0MjIyNjU5LjE3Mzc0MjEzNzQ.*_ga*ODI2Njc4NDUzLjE3Mzc0MjEzNzE.*_ga_9J976DJZ68*MTc0MDQ5MDQ3MS4xMS4xLjE3NDA0OTA2NTcuNTUuMC4w"
+                        target="_blank" rel="noopener noreferrer">get and invite.</a></li>
+                <li><img src="https://kotlinlang.org/docs/images/stackoverflow.svg"
+                        alt="stackoverflow_logo">StackOverflow: subscribe to the <a
+                        href="https://stackoverflow.com/questions/tagged/kotlin" target="_blank"
+                        rel="noopener noreferrer">"kotlin"</a> tag.</li>
+            </ul>
+            <p><strong>Follow Kotlin on:</strong></p>
+            <ul>
+                <li><img src="https://kotlinlang.org/docs/images/twitter.svg" alt="twitter_logo"><a
+                        href="https://twitter.com/kotlin" target="_blank" rel="noopener noreferrer">Twitter</a></li>
+                <li><img src="https://kotlinlang.org/docs/images/reddit.svg" alt="reddit_logo"><a href="Reddit"
+                        target="_blank" rel="noopener noreferrer">Reddit</a></li>
+                <li><img src="https://kotlinlang.org/docs/images/youtube.svg" alt="youtube_logo"><a
+                        href="https://www.youtube.com/channel/UCP7uiEZIqci43m22KDl0sNw" target="_blank"
+                        rel="noopener noreferrer">Youtube</a></li>
+            </ul>
+
+        </section>
+        <section class="main-section" id="Package_definition_and_imports">
+            <header>Package definition and imports</header>
+            <p>Package specification should be at the top of the source file:</p>
+            <div class="code-container">
+                <pre>
+<code>package my.demo
+import kotlin.text.*
+
+// ...</code>
+</pre>
+            </div>
+            <p>It is not required to match directories and packages: source files can be placed arbitrarily in the file
+                system. </p>
+            <p>See <a href="https://kotlinlang.org/docs/packages.html" target="_blank"
+                    rel="noopener noreferrer">Packages.</a></p>
+        </section>
+        <section class="main-section" id="Program_entry_point">
+            <header>Program entry point</header>
+            <p>An entry point of a Kotlin application is the <span>main</span> function:</p>
+            <div class="code-container">
+                <pre>
+<code>fun main() {
+    println("Hello world!")
+}</code>
+</pre>
+            </div>
+            <p>Another form of <span>main</span> accepts a variable number of <span>String</span> arguments:</p>
+            <div class="code-container">
+                <pre>
+<code>fun main(args: Array<String>) {
+    println(args.contentToString())
+}</code>
+</pre>
+            </div>
+        </section>
+        <section class="main-section" id="Print_to_the_standard_output">
+            <header>Print to the standard output</header>
+            <p><span>print</span> prints its argument to the standard output:</p>
+            <div class="code-container">
+                <pre>
+<code>fun main() {
+    print("Hello ")
+    print("world!")
+}</code>
+</pre>
+            </div>
+            <p><span>println</span> prints its arguments and adds a line break, so that the next thing you print appears
+                on the next
+                line:</p>
+            <div class="code-container">
+                <pre>
+<code>fun main() {
+    println("Hello world!")
+    println(42)
+}</code>
+</pre>
+            </div>
+        </section>
+        <section class="main-section" id="Read_from_the_standard_input">
+            <header>Read from the standard input</header>
+            <p>The <span>readln()</span> function reads from the standard input. This function reads the entire line the
+                user enters
+                as a string.</p>
+            <p>You can use the <span>println()</span>, <span>readln()</span>, and <span>print()</span> functions
+                together to print messages requesting and showing user input:</p>
+            <div class="code-container">
+                <pre>
+<code>// Prints a message to request input
+println("Enter any word: ")
+
+// Reads and stores the user input. For example: Happiness
+val yourWord = readln()
+
+// Prints a message with the input
+print("You entered the word: ")
+print(yourWord)
+// You entered the word: Happiness</code>
+</pre>
+            </div>
+            <p>For more information, see <a href="https://kotlinlang.org/docs/read-standard-input.html" target="_blank"
+                    rel="noopener noreferrer">Read standard input</a>.</p>
+        </section>
+        <section class="main-section" id="Functions">
+            <header>Functions</header>
+            <p>A function with two <span>Int</span> parameters and <span>Int</span> return type:</p>
+            <div class="code-container">
+                <pre>
+<code>fun sum(a: Int, b: Int): Int {
+    return a + b
+}</code>
+</pre>
+            </div>
+            <p>A function body can be an expression. Its return type is inferred:</p>
+            <div class="code-container">
+                <pre>
+<code>fun sum(a: Int, b: Int) = a + b</code>
+</pre>
+            </div>
+            <p>A function that returns no meaningful value:</p>
+            <div class="code-container">
+                <pre>
+<code>fun printSum(a: Int, b: Int): Unit {
+    println("sum of $a and $b is ${a + b}")
+}</code>
+</pre>
+            </div>
+            <p><span>Unit</span> return type can be omitted:</p>
+            <div class="code-container">
+                <pre>
+<code>fun printSum(a: Int, b: Int) {
+    println("sum of $a and $b is ${a + b}")
+}</code>
+</pre>
+            </div>
+            <p>See <a href="https://kotlinlang.org/docs/functions.html" target="_blank"
+                    rel="noopener noreferrer">Functions</a>.</p>
+        </section>
+    </main>
+
+</body>
+
+</html>
